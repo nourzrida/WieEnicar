@@ -8,10 +8,15 @@ import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import SideBar from "../components/SideBar"; // Sidebar Component
+import Forum from './Forum';
+import Articles from './Articles';
+import VideoPage from './VideoPage';
+import LadyGuide from './LadyGuide';
+import Aboutus from './Aboutus'; // Import the new Forum screen
 
-// HomeScreen Component
+// HomeContent Component
 function HomeContent({ navigation }) {
-  const [modalVisible, setModalVisible] = useState(false); // State to control modal visibility
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <Background>
@@ -36,7 +41,7 @@ function HomeContent({ navigation }) {
         animationType="slide"
         transparent={true}
         visible={modalVisible}
-        onRequestClose={() => setModalVisible(false)} // Close modal on back button press
+        onRequestClose={() => setModalVisible(false)}
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
@@ -56,14 +61,19 @@ function HomeContent({ navigation }) {
   );
 }
 
-// Create the Drawer Navigator for HomeScreen
-const Drawer = createDrawerNavigator();
+// Create the first Drawer Navigator for HomeScreen
+const HomeDrawer = createDrawerNavigator();
 
 function HomeScreen() {
   return (
-    <Drawer.Navigator drawerContent={(props) => <SideBar {...props} />}>
-      <Drawer.Screen name="Home" component={HomeContent} />
-    </Drawer.Navigator>
+    <HomeDrawer.Navigator drawerContent={(props) => <SideBar {...props} />}>
+      <HomeDrawer.Screen name="Home" component={HomeContent} />
+      <HomeDrawer.Screen name="Lady Guid" component={LadyGuide} />
+      <HomeDrawer.Screen name="Forum" component={Forum} /> 
+      <HomeDrawer.Screen name="Articles" component={Articles} />
+      <HomeDrawer.Screen name="Video Page" component={VideoPage} /> 
+      <HomeDrawer.Screen name="About Us" component={Aboutus} />
+    </HomeDrawer.Navigator>
   );
 }
 
@@ -76,20 +86,20 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   customButton: {
-    backgroundColor: "#EEAADC", // Custom background color
+    backgroundColor: "#EEAADC",
     padding: 5,
     borderRadius: 10,
     alignItems: "center",
   },
   buttonText: {
-    color: "#962577", // White text on the pink button
+    color: "#962577",
     fontSize: 16,
   },
   centeredView: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   modalView: {
     margin: 20,
