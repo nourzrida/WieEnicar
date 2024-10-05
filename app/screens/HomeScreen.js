@@ -1,27 +1,35 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Modal, Button, Text } from "react-native";
+import { View, StyleSheet, Modal, Text, TouchableOpacity } from "react-native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 // Import custom components
 import Background from "../components/Background";
 import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
+import SideBar from "../components/SideBar"; // Sidebar Component
 
 // HomeScreen Component
-function HomeScreen({ navigation }) {
+function HomeContent({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false); // State to control modal visibility
 
   return (
     <Background>
       <Logo />
       <Header>Welcome 💫</Header>
-      <Paragraph>Congratulations you are logged in.</Paragraph>
+      <Paragraph style={styles.par}>
+        Heyyy princess, to protect yourself and your information, please
+        activate the notification AI. If you activate it, the AI will monitor
+        any notification you receive, and generate a message to alert you if
+        there's a potential issue or if the sender is engaging in harassment.
+      </Paragraph>
 
-      {/* Button to open the modal */}
-      <Button
-        title="Click to open modal"
+      <TouchableOpacity
+        style={styles.customButton}
         onPress={() => setModalVisible(true)}
-      />
+      >
+        <Text style={styles.buttonText}>Click to activate AI notification</Text>
+      </TouchableOpacity>
 
       {/* Modal Component */}
       <Modal
@@ -32,11 +40,15 @@ function HomeScreen({ navigation }) {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Welcome to GFG!!!</Text>
-            <Button
-              title="Close modal"
+            <Text style={styles.modalText}>
+              The Notification AI is now activated!
+            </Text>
+            <TouchableOpacity
+              style={styles.customButton}
               onPress={() => setModalVisible(false)}
-            />
+            >
+              <Text style={styles.buttonText}>Close Modal</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
@@ -44,7 +56,35 @@ function HomeScreen({ navigation }) {
   );
 }
 
+// Create the Drawer Navigator for HomeScreen
+const Drawer = createDrawerNavigator();
+
+function HomeScreen() {
+  return (
+    <Drawer.Navigator drawerContent={(props) => <SideBar {...props} />}>
+      <Drawer.Screen name="Home" component={HomeContent} />
+    </Drawer.Navigator>
+  );
+}
+
 const styles = StyleSheet.create({
+  par: {
+    fontSize: 10,
+    alignItems: "center",
+    color: "#EEAADC",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  customButton: {
+    backgroundColor: "#EEAADC", // Custom background color
+    padding: 5,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#962577", // White text on the pink button
+    fontSize: 16,
+  },
   centeredView: {
     flex: 1,
     justifyContent: "center",

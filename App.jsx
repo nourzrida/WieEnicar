@@ -1,7 +1,6 @@
 import React from "react";
 import { Provider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
@@ -13,10 +12,8 @@ import {
   ResetPasswordScreen,
   HomeScreen,
 } from "./app/screens";
-import SideBar from "./app/components/SideBar"; // Add Sidebar import
 
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 // Stack Navigator
 const StackNavigator = () => {
@@ -44,12 +41,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Provider theme={theme}>
         <NavigationContainer>
-          <Drawer.Navigator
-            drawerContent={(props) => <SideBar {...props} />} // Set Sidebar
-          >
-            <Drawer.Screen name="Home" component={StackNavigator} />
-            {/* Add more screens as needed */}
-          </Drawer.Navigator>
+          <StackNavigator />
         </NavigationContainer>
       </Provider>
     </GestureHandlerRootView>
