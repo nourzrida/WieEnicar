@@ -8,15 +8,11 @@ import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import SideBar from "../components/SideBar"; // Sidebar Component
-<<<<<<< HEAD
 import Forum from './Forum';
 import Articles from './Articles';
 import VideoPage from './VideoPage';
 import LadyGuide from './LadyGuide';
 import Aboutus from './Aboutus'; // Import the new Forum screen
-=======
-import LadyGuide from "./LadyGuide";
->>>>>>> bf56a3274f5bc643f0a53771908f60b38e730e8c
 
 // HomeContent Component
 function HomeContent({ navigation }) {
