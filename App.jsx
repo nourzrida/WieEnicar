@@ -11,6 +11,8 @@ import {
   RegisterScreen,
   ResetPasswordScreen,
   HomeScreen,
+  LadyGuide,
+  TypesOfHarassment,
 } from "./app/screens";
 
 const Stack = createStackNavigator();
@@ -32,6 +34,8 @@ const StackNavigator = () => {
         name="ResetPasswordScreen"
         component={ResetPasswordScreen}
       />
+      <Stack.Screen name="LadyGuide" component={LadyGuide} />
+      <Stack.Screen name="TypesOfHarassment" component={TypesOfHarassment} />
     </Stack.Navigator>
   );
 };

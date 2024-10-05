@@ -8,6 +8,7 @@ import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import SideBar from "../components/SideBar"; // Sidebar Component
+import LadyGuide from "./LadyGuide";
 
 // HomeScreen Component
 function HomeContent({ navigation }) {
@@ -63,6 +64,7 @@ function HomeScreen() {
   return (
     <Drawer.Navigator drawerContent={(props) => <SideBar {...props} />}>
       <Drawer.Screen name="Home" component={HomeContent} />
+      <Drawer.Screen name="LadyGuide" component={LadyGuide} />
     </Drawer.Navigator>
   );
 }
