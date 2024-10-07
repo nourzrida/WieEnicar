@@ -22,13 +22,13 @@ const SideBar = (props) => {
 
         <View style={styles.socialIcons}>
           <TouchableOpacity onPress={() => console.log('Facebook pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/facebook.png')} style={styles.icon} />
+            <Image source={require('../../assets/facebook.png')} style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => console.log('Instagram pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/instagram.png')} style={styles.icon} />
+            <Image source={require('../../assets/instagram.png')} style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => console.log('LinkedIn pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/linkedin.png')} style={styles.icon} />
+            <Image source={require('../../assets/linkedin.png')} style={styles.icon} />
           </TouchableOpacity>
         </View>
       </View>
