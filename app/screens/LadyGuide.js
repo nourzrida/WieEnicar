@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
-import TypesOfHarassment from "./TypesOfHarassment";
 // Custom components and UI for LadyGuide
 const LadyGuide = ({ navigation }) => {
   return (
@@ -28,7 +27,10 @@ const LadyGuide = ({ navigation }) => {
         />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.sectionButton}>
+      <TouchableOpacity
+        style={styles.sectionButton}
+        onPress={() => navigation.navigate("HarasserBehavior")}
+      >
         <Text style={styles.buttonText}>Harasser behavior</Text>
         <Image
           source={require("../../assets/Vector.png")}
@@ -36,7 +38,10 @@ const LadyGuide = ({ navigation }) => {
         />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.sectionButton}>
+      <TouchableOpacity
+        style={styles.sectionButton}
+        onPress={() => navigation.navigate("StepstoAvoidHarassment")}
+      >
         <Text style={styles.buttonText}>Steps to avoid harassment</Text>
         <Image
           source={require("../../assets/Vector.png")}

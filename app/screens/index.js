@@ -5,3 +5,7 @@ export { default as ResetPasswordScreen } from "./ResetPasswordScreen";
 export { default as HomeScreen } from "./HomeScreen";
 export { default as LadyGuide } from "./LadyGuide";
 export { default as TypesOfHarassment } from "./TypesOfHarassment";
+export { default as HarasserBehavior } from "./HarasserBehavior";
+export { default as StepstoAvoidHarassment } from "./StepstoAvoidHarassment";
+export { default as Articles } from "./Articles";
+export { default as OnlineHarassmentArticle } from "./OnlineHarassmentArticle";
