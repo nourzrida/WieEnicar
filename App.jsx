@@ -13,6 +13,10 @@ import {
   HomeScreen,
   LadyGuide,
   TypesOfHarassment,
+  HarasserBehavior,
+  StepstoAvoidHarassment,
+  Articles,
+  OnlineHarassmentArticle,
 } from "./app/screens";
 
 const Stack = createStackNavigator();
@@ -36,6 +40,16 @@ const StackNavigator = () => {
       />
       <Stack.Screen name="LadyGuide" component={LadyGuide} />
       <Stack.Screen name="TypesOfHarassment" component={TypesOfHarassment} />
+      <Stack.Screen name="HarasserBehavior" component={HarasserBehavior} />
+      <Stack.Screen
+        name="StepstoAvoidHarassment"
+        component={StepstoAvoidHarassment}
+      />
+      <Stack.Screen name="Articles" component={Articles} />
+      <Stack.Screen
+        name="OnlineHarassmentArticle"
+        component={OnlineHarassmentArticle}
+      />
     </Stack.Navigator>
   );
 };

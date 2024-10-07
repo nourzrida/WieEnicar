@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#7F2A82", // Deep purple text color
     marginBottom: 20,
+    marginLeft: 40,
   },
   listItem: {
     flexDirection: "row",
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   heartIcon: {
     width: 50,
     height: 50,
-    marginTop: 10,
+    marginTop: 5,
   },
 });
 

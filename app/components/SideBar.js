@@ -1,6 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+} from "@react-navigation/drawer";
 
 const SideBar = (props) => {
   const handleLogout = () => {
@@ -21,14 +24,23 @@ const SideBar = (props) => {
         </TouchableOpacity>
 
         <View style={styles.socialIcons}>
-          <TouchableOpacity onPress={() => console.log('Facebook pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/facebook.png')} style={styles.icon} />
+          <TouchableOpacity onPress={() => console.log("Facebook pressed")}>
+            <Image
+              source={require("../../assets/facebook.png")}
+              style={styles.icon}
+            />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => console.log('Instagram pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/instagram.png')} style={styles.icon} />
+          <TouchableOpacity onPress={() => console.log("Instagram pressed")}>
+            <Image
+              source={require("../../assets/instagram.png")}
+              style={styles.icon}
+            />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => console.log('LinkedIn pressed')}>
-            <Image source={require('C:/Users/User/Desktop/Wie Act/WieEnicar/assets/linkedin.png')} style={styles.icon} />
+          <TouchableOpacity onPress={() => console.log("LinkedIn pressed")}>
+            <Image
+              source={require("../../assets/linkedin.png")}
+              style={styles.icon}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -51,12 +63,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoutButton: {
-    width: '100%', // Full width of the sidebar
+    width: "100%", // Full width of the sidebar
     backgroundColor: "#f44336",
     padding: 15, // Adjust padding for height
     borderRadius: 5,
-    alignItems: 'center', // Center text horizontally
-    justifyContent: 'center', // Center text vertically
+    alignItems: "center", // Center text horizontally
+    justifyContent: "center", // Center text vertically
     marginBottom: 10, // Add some space below the button
   },
   logoutText: {
