@@ -1,42 +1,105 @@
-# Exlogrn 🚀
+# WieEnicar
 
-A starter app template for React Native Expo, featuring a ready-to-use login screen.
+A React Native mobile application built with Expo to help users learn about harassment, recognize harmful behaviors, and discover practical ways to stay safe.
 
-![AllScreens](assets/screenshot/snap.png)
+## Features
 
-## About ✔️
+- User registration and login
+- Password reset flow
+- Guidance for women
+- Information about different types of harassment
+- Explanations of harasser behavior
+- Practical steps to avoid harassment
+- Educational articles, including online harassment awareness
+- Android, iOS, and web support through Expo
 
-What can you do with this template 🤔
+## Tech Stack
 
-- Log in with an email address and password.
-- Create an account with a name, email address and password.
-- Sign out.
+- React Native
+- Expo SDK 51
+- React Navigation
+- React Native Paper
+- React Hook Form
+- Axios
+- React Native Gesture Handler
 
-This template is a good way to start an application with a system of connection, disconnection, and creation of an account.  
-You will just need to adapt it according to your needs.
+## Getting Started
 
-![Made-In-Senegal](https://github.com/GalsenDev221/made.in.senegal/blob/master/assets/badge.svg)
+### Prerequisites
 
-## Usage ℹ️
+Make sure you have the following installed:
 
-Click on the **[Use this template](https://github.com/daoodaba975/exlogrn/generate)** button on this page to clone this respository to your GitHub account or you can clone this respository.
+- Node.js
+- npm or Yarn
+- Expo CLI or access to `npx expo`
+- Android Studio for Android development, or Xcode for iOS development
 
-- Install dependencies
+### Installation
+
+Clone the repository and install its dependencies:
+
+```bash
+git clone https://github.com/nourzrida/WieEnicar.git
+cd WieEnicar
+npm install
+```
+
+You can also use Yarn:
 
 ```bash
 yarn install
 ```
 
-- Start the app
+### Run the application
+
+Start the Expo development server:
 
 ```bash
 npx expo start
 ```
 
-You can take a look on Expo's [docs](https://docs.expo.dev).
+Then use the Expo development tools to open the app on:
 
-### Licence 🚨
+- An Android emulator or physical Android device
+- An iOS simulator or physical iOS device
+- A web browser
 
-This template is released under the **[MIT License](LICENSE.md)**.
+You can also use the package scripts directly:
 
-Enjoy ✌🏽
+```bash
+npm run android
+npm run ios
+npm run web
+```
+
+## Project Structure
+
+```text
+.
+├── app/                  # Screens and application modules
+├── assets/               # Images, icons, and other static assets
+├── App.jsx               # Application entry point and navigation
+├── app.json              # Expo configuration
+├── babel.config.js       # Babel configuration
+└── package.json          # Dependencies and scripts
+```
+
+## Navigation
+
+The application currently includes screens for:
+
+- Welcome/start screen
+- Login
+- Registration
+- Password reset
+- Home
+- Women’s guidance
+- Types of harassment
+- Harasser behavior
+- Steps to avoid harassment
+- Articles
+- Online harassment article
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
